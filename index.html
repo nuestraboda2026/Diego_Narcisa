@@ -48,35 +48,39 @@
 .num{font-family:Montserrat,Arial,sans-serif!important;font-size:26px!important;font-weight:400!important}
 .calendar-number{font-family:Montserrat,Arial,sans-serif!important;font-weight:300!important}
 .details{gap:72px!important}.detail{position:relative}.detail+.detail:before{content:"";display:block;width:76px;height:1px;background:#d8c7a5;margin:0 auto 48px}
-</style></head><body><main class="site">
+
+/* FINAL PROFESSIONAL ICON TREATMENT */
+.elegant-symbol{position:relative;width:132px;height:112px;margin:24px auto 20px;display:flex;align-items:center;justify-content:center;color:var(--gold)}
+.elegant-symbol:before{content:"";position:absolute;width:88px;height:88px;border:1px solid #c9ad78;border-radius:50%;opacity:.65}
+.elegant-symbol>i{font-size:43px;position:relative;z-index:2}
+.symbol-flourish{position:absolute;bottom:1px;background:var(--cream);padding:0 9px;font:22px "Cormorant Garamond";z-index:3}
+.dark .symbol-flourish{background:var(--deep)}
+.dark .elegant-symbol{color:#d9bd83}.dark .elegant-symbol:before{border-color:#d9bd83}
+.couple-icons{position:relative;z-index:2;display:flex;align-items:flex-end;gap:12px;font-size:47px}
+.couple-icons .fa-person-dress{font-size:51px}
+.ring-pair{position:relative;z-index:2;display:flex;gap:0;transform:rotate(-8deg);font-size:38px}
+.ring-pair i+ i{margin-left:-8px;transform:rotate(16deg)}
+.botanical{position:absolute;bottom:-3px;background:var(--cream);padding:0 9px;font:18px "Cormorant Garamond";z-index:3;white-space:nowrap}
+.toast-symbol>i{font-size:46px}.church-symbol>i{font-size:44px}
+</style><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"></head><body><main class="site">
 <section class="hero"><div class="hero-inner"><div class="mono">D & N</div><div class="tiny">Con la bendición de Dios</div><div class="names">Diego & Narcisa</div><div class="date">24 · OCTUBRE · 2026</div><button class="hero-play" onclick="toggleMusic()">♫ &nbsp; DALE PLAY A NUESTRA CANCIÓN</button><div class="scroll">DESLIZA PARA DESCUBRIR NUESTRA HISTORIA ↓</div></div></section>
 <section class="section reveal"><div class="eyebrow">Nuestra promesa</div><h2>El comienzo de nuestro para siempre</h2><div class="ornament">— ✦ —</div><p class="quote">“Lo que Dios ha unido, que no lo separe el hombre.”</p><p>Mateo 19, 6</p><p>Con mucha alegría queremos compartir contigo uno de los días más importantes de nuestra vida.</p></section>
 <section class="section soft reveal"><div class="eyebrow">Cada día estamos más cerca</div><h2>Solo faltan</h2><div class="countdown"><div class="count"><div class="num" id="days">00</div><div class="lab">DÍAS</div></div><div class="count"><div class="num" id="hours">00</div><div class="lab">HORAS</div></div><div class="count"><div class="num" id="mins">00</div><div class="lab">MIN.</div></div><div class="count"><div class="num" id="secs">00</div><div class="lab">SEG.</div></div></div></section>
 <section class="photo church reveal"><div class="photo-copy"><div class="tiny">Ceremonia religiosa</div><div class="script">Nuestra bendición</div><p>San Pedro del Cebollar · 16:00</p></div></section>
-<section class="section reveal"><div class="eyebrow">24 de octubre de 2026</div><h2>Nos encontraremos ante Dios</h2><p>La ceremonia religiosa se celebrará en la Iglesia San Pedro del Cebollar, en Cuenca.</p><div class="event"><div class="pro-icon church" aria-hidden="true"><svg viewBox="0 0 120 110">
-<path class="line" d="M26 98h68M34 98V50l26-20 26 20v48M46 98V75c0-9 6-15 14-15s14 6 14 15v23M45 54h30"/>
-<path class="line" d="M60 30V12M53 18h14M39 46V34M81 46V34M28 98V64h12M92 98V64H80"/>
-<circle class="soft" cx="60" cy="48" r="6"/><path class="line" d="M57 48h6M60 45v6"/>
-</svg></div><div class="time">16:00</div><div class="place">San Pedro del Cebollar</div><a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Iglesia+San+Pedro+del+Cebollar+Cuenca+Ecuador">Cómo llegar</a></div></section>
+<section class="section reveal"><div class="eyebrow">24 de octubre de 2026</div><h2>Nos encontraremos ante Dios</h2><p>La ceremonia religiosa se celebrará en la Iglesia San Pedro del Cebollar, en Cuenca.</p><div class="event"><div class="elegant-symbol church-symbol" aria-hidden="true">
+<i class="fa-solid fa-church"></i><span class="symbol-flourish">❦</span>
+</div><div class="time">16:00</div><div class="place">San Pedro del Cebollar</div><a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Iglesia+San+Pedro+del+Cebollar+Cuenca+Ecuador">Cómo llegar</a></div></section>
 <section class="photo party reveal"><div class="photo-copy"><div class="tiny">Después del “Sí, acepto”</div><div class="script">Celebrémoslo juntos</div><p>Estancia San José · 18:00</p></div></section>
-<section class="section dark reveal"><div class="eyebrow">Una noche para recordar</div><h2>La celebración continúa</h2><p>Después de recibir nuestra bendición, queremos brindar, sonreír y compartir contigo una noche muy especial.</p><div class="event" style="border-color:#ffffff35"><div class="pro-icon toast" aria-hidden="true"><svg viewBox="0 0 120 110">
-<path class="line" d="M24 15h30l-4 38c-1 11-6 18-11 18s-10-7-11-18zM39 71v22M27 98h24"/>
-<path class="line" d="M66 15h30l-4 38c-1 11-6 18-11 18s-10-7-11-18zM81 71v22M69 98h24"/>
-<path class="goldfill" d="M28 43c8 3 15 3 24 0l-1 10c-1 9-6 15-12 15s-10-6-11-15zM70 43c8 3 15 3 24 0l-1 10c-1 9-6 15-12 15s-10-6-11-15z"/>
-<path class="line" d="M53 31l14 12M56 20l5-7M64 25l9-3"/>
-</svg></div><div class="time" style="color:#fff">18:00</div><div class="place">Estancia San José</div><a class="btn ghost" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Estancia+San+Jose+Cuenca+Ecuador">Cómo llegar</a></div></section>
-<section class="section soft reveal"><div class="eyebrow">Detalles de nuestro día</div><h2>Todo preparado con amor</h2><div class="details"><div class="detail"><div class="pro-icon attire" aria-hidden="true"><svg viewBox="0 0 170 130">
-<path class="line" d="M25 30l23-12 23 12 10 42-17 7v40H32V79l-17-7zM32 26l16 19 16-19M48 45v74M34 119l-10 7M62 119l10 7"/>
-<path class="goldfill" d="M44 20l4 7 4-7-4-5z"/>
-<path class="line" d="M109 22h23l7 24 22 72H81l21-72zM109 22l11 19 12-19M101 45L88 67M140 45l14 22M95 85h51"/>
-<path class="soft" d="M94 85h52l9 33H84z"/>
-<path class="line" d="M108 18c0-7 5-12 12-12s12 5 12 12M36 16c0-7 5-12 12-12s12 5 12 12"/>
-</svg></div><div class="script">Dress code</div><p><strong>ESTRICTAMENTE FORMAL</strong></p><p>Queremos que esta ocasión se sienta tan especial como lo es para nosotros.</p></div><div class="detail"><div class="pro-icon rings" aria-hidden="true"><svg viewBox="0 0 160 110">
-<path class="line" d="M15 79c17-5 29-16 39-34M145 79c-17-5-29-16-39-34M24 71l-12-10M34 62l-5-16M136 71l12-10M126 62l5-16"/>
-<circle class="soft" cx="67" cy="61" r="28"/><circle class="soft" cx="93" cy="61" r="28"/>
-<path class="goldfill" d="M65 28l9-15h12l9 15-15 9z"/><path class="line" d="M74 13l6 24 6-24M54 90c17 8 35 8 52 0"/>
-<circle class="green" cx="29" cy="48" r="3"/><circle class="green" cx="131" cy="48" r="3"/>
-</svg></div><div class="script">Nuestros padrinos</div><p><strong>Leonardo Pacheco & Catalina Faicán</strong></p><p>Gracias por acompañarnos y ser parte especial de nuestra unión.</p></div></div></section>
+<section class="section dark reveal"><div class="eyebrow">Una noche para recordar</div><h2>La celebración continúa</h2><p>Después de recibir nuestra bendición, queremos brindar, sonreír y compartir contigo una noche muy especial.</p><div class="event" style="border-color:#ffffff35"><div class="elegant-symbol toast-symbol" aria-hidden="true">
+<i class="fa-solid fa-champagne-glasses"></i><span class="symbol-flourish">✦</span>
+</div><div class="time" style="color:#fff">18:00</div><div class="place">Estancia San José</div><a class="btn ghost" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Estancia+San+Jose+Cuenca+Ecuador">Cómo llegar</a></div></section>
+<section class="section soft reveal"><div class="eyebrow">Detalles de nuestro día</div><h2>Todo preparado con amor</h2><div class="details"><div class="detail"><div class="elegant-symbol attire-symbol" aria-hidden="true">
+<span class="couple-icons"><i class="fa-solid fa-person"></i><i class="fa-solid fa-person-dress"></i></span>
+<span class="symbol-flourish">❦</span>
+</div><div class="script">Dress code</div><p><strong>ESTRICTAMENTE FORMAL</strong></p><p>Queremos que esta ocasión se sienta tan especial como lo es para nosotros.</p></div><div class="detail"><div class="elegant-symbol rings-symbol" aria-hidden="true">
+<span class="ring-pair"><i class="fa-solid fa-ring"></i><i class="fa-solid fa-ring"></i></span>
+<span class="botanical">❧ &nbsp; ✦ &nbsp; ❧</span>
+</div><div class="script">Nuestros padrinos</div><p><strong>Leonardo Pacheco & Catalina Faicán</strong></p><p>Gracias por acompañarnos y ser parte especial de nuestra unión.</p></div></div></section>
 <section class="section reveal"><div class="eyebrow">Guarda nuestra fecha</div><h2>Que este día también esté en tu calendario</h2><div class="month-card" aria-label="Calendario de octubre de 2026">
 <div class="month-title">Octubre 2026</div>
 <div class="month-grid"><div class="dow">L</div><div class="dow">M</div><div class="dow">M</div><div class="dow">J</div><div class="dow">V</div><div class="dow">S</div><div class="dow">D</div><div class="empty"></div><div class="empty"></div><div class="empty"></div><div class="day">1</div><div class="day">2</div><div class="day">3</div><div class="day">4</div><div class="day">5</div><div class="day">6</div><div class="day">7</div><div class="day">8</div><div class="day">9</div><div class="day">10</div><div class="day">11</div><div class="day">12</div><div class="day">13</div><div class="day">14</div><div class="day">15</div><div class="day">16</div><div class="day">17</div><div class="day">18</div><div class="day">19</div><div class="day">20</div><div class="day">21</div><div class="day">22</div><div class="day">23</div><div class="day wedding-day" aria-label="24 de octubre, día de nuestra boda">24</div><div class="day">25</div><div class="day">26</div><div class="day">27</div><div class="day">28</div><div class="day">29</div><div class="day">30</div><div class="day">31</div><div class="empty"></div></div>
