@@ -1,6 +1,6 @@
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//Narcisa y Diego//Nuestra Boda 2026//ES
+PRODID:-//Diego y Narcisa//Nuestra Boda 2026//ES
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
@@ -8,10 +8,10 @@ UID:boda-narcisa-diego-20261024@nuestraboda2026.github.io
 DTSTAMP:20260925T150000Z
 DTSTART:20261024T210000Z
 DTEND:20261025T030000Z
-SUMMARY:Boda de Narcisa & Diego
+SUMMARY:Boda de Diego & Narcisa
 LOCATION:Iglesia San Pedro del Cebollar, Cuenca, Ecuador
 DESCRIPTION:Ceremonia religiosa 16h00 en Iglesia San Pedro del Cebollar. Recepción 18h00 en Estancia San José.
-URL:https://nuestraboda2026.github.io/Narcisa_Diego/
+URL:https://nuestraboda2026.github.io/Diego_Narcisa/
 STATUS:CONFIRMED
 END:VEVENT
 END:VCALENDAR
