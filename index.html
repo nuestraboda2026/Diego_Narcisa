@@ -72,28 +72,29 @@
 
   <div class="bank">
 
-    <img src="assets/logo-banco-pacifico.png"
-         alt="Banco del Pacífico"
-         class="bank-logo">
+    <img
+      src="assets/logo-banco-pacifico.png"
+      alt="Banco del Pacífico"
+      class="bank-logo"
+    >
 
-    <span class="bank-label">Cuenta de ahorros</span>
-
-    <div id="accountNumber" class="account-number">
-      1040847087
+    <div class="bank-item">
+      <span>Cuenta de ahorros</span>
+      <strong id="accountNumber" class="account-number">
+        1040847087
+      </strong>
     </div>
 
     <div class="bank-divider"></div>
 
-    <div class="bank-info">
-      <div>
-        <span>Titular</span>
-        <strong>Diego Faican</strong>
-      </div>
+    <div class="bank-item">
+      <span>C.I.</span>
+      <strong>0103662805</strong>
+    </div>
 
-      <div>
-        <span>C.I.</span>
-        <strong>0103662805</strong>
-      </div>
+    <div class="bank-item">
+      <span>Titular</span>
+      <strong>Diego Faican</strong>
     </div>
 
     <button class="btn ghost" onclick="copyAccount()">
@@ -106,33 +107,51 @@
 </section>
 
 <style>
+
 .bank {
   max-width: 430px;
   margin: 30px auto 0;
-  padding: 35px 35px 28px;
+  padding: 35px 25px 30px;
   text-align: center;
   background: #fff;
   border: 1px solid rgba(181, 132, 63, .35);
   border-radius: 18px;
-  box-shadow: 0 12px 35px rgba(80, 60, 30, .06);
 }
 
+/* LOGO MÁS GRANDE */
 .bank-logo {
-  width: 200px;
-  max-width: 70%;
+  display: block;
+  width: 280px;
+  max-width: 85%;
   height: auto;
-  display: block;
-  margin: 0 auto 28px;
+  margin: 0 auto 35px;
 }
 
-.bank-label {
-  display: block;
-  font-size: 16px;
-  color: #766c62;
-  margin-bottom: 9px;
+/* CADA DATO UNO DEBAJO DEL OTRO */
+.bank-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 24px;
 }
 
-.account-number {
+.bank-item span {
+  font-size: 14px;
+  font-weight: 400;
+  color: #88786b;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.bank-item strong {
+  font-size: 19px;
+  font-weight: 400;
+  color: #303a39;
+  letter-spacing: .5px;
+}
+
+/* NÚMERO DE CUENTA PRINCIPAL */
+.bank-item .account-number {
   font-size: 29px;
   font-weight: 600;
   letter-spacing: 4px;
@@ -140,41 +159,15 @@
 }
 
 .bank-divider {
-  width: 55px;
+  width: 65px;
   height: 1px;
-  background: #c69a5c;
-  margin: 25px auto;
-}
-
-.bank-info {
-  display: flex;
-  justify-content: center;
-  gap: 55px;
-  margin-bottom: 28px;
-}
-
-.bank-info div {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.bank-info span {
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  color: #a09284;
-}
-
-.bank-info strong {
-  font-size: 15px;
-  font-weight: 400;
-  color: #393532;
+  background: #c79755;
+  margin: 0 auto 24px;
 }
 
 .bank .btn {
-  margin-top: 4px;
-  padding: 13px 27px;
+  margin-top: 5px;
+  padding: 14px 28px;
   font-size: 10px;
   letter-spacing: 2px;
 }
@@ -187,34 +180,35 @@
 }
 
 @media (max-width: 500px) {
+
   .bank {
     padding: 30px 20px 25px;
   }
 
   .bank-logo {
-    width: 190px;
-    max-width: 75%;
+    width: 250px;
+    max-width: 90%;
+    margin-bottom: 30px;
   }
 
-  .account-number {
-    font-size: 25px;
+  .bank-item .account-number {
+    font-size: 26px;
     letter-spacing: 3px;
   }
-
-  .bank-info {
-    gap: 30px;
-  }
 }
+
 </style>
 
 <script>
 function copyAccount() {
+
   const account = document
     .getElementById("accountNumber")
     .textContent
     .trim();
 
   navigator.clipboard.writeText(account).then(() => {
+
     const message = document.getElementById("copyOk");
 
     message.textContent = "Número copiado ✓";
@@ -222,6 +216,7 @@ function copyAccount() {
     setTimeout(() => {
       message.textContent = "";
     }, 3000);
+
   });
 }
 </script>
