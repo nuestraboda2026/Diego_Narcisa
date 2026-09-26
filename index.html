@@ -72,12 +72,16 @@
 
   <div class="bank">
 
-    <img
-      src="assets/logo-banco-pacifico.png"
-      alt="Banco del Pacífico"
-      class="bank-logo"
-    >
+    <!-- LOGO BANCO DEL PACÍFICO -->
+    <div class="bank-logo-box">
+      <img
+        src="assets/logo-banco-pacifico.png"
+        alt="Banco del Pacífico"
+        class="bank-logo"
+      >
+    </div>
 
+    <!-- TIPO Y NÚMERO DE CUENTA -->
     <div class="bank-item">
       <span>Cuenta de ahorros</span>
       <strong id="accountNumber" class="account-number">
@@ -87,16 +91,19 @@
 
     <div class="bank-divider"></div>
 
+    <!-- CÉDULA -->
     <div class="bank-item">
       <span>C.I.</span>
       <strong>0103662805</strong>
     </div>
 
+    <!-- TITULAR -->
     <div class="bank-item">
       <span>Titular</span>
       <strong>Diego Faican</strong>
     </div>
 
+    <!-- BOTÓN COPIAR -->
     <button class="btn ghost" onclick="copyAccount()">
       Copiar número de cuenta
     </button>
@@ -106,100 +113,203 @@
   </div>
 </section>
 
+
 <style>
+
+/* ==============================
+   TARJETA BANCARIA
+   ============================== */
 
 .bank {
   max-width: 430px;
   margin: 30px auto 0;
-  padding: 35px 25px 30px;
+  padding: 30px 25px 28px;
+
   text-align: center;
-  background: #fff;
-  border: 1px solid rgba(181, 132, 63, .35);
+
+  background: #ffffff;
+
+  border: 1px solid rgba(181, 132, 63, 0.35);
   border-radius: 18px;
+
+  box-shadow: 0 10px 30px rgba(80, 60, 30, 0.05);
 }
 
-/* LOGO MÁS GRANDE */
+
+/* ==============================
+   LOGO BANCO DEL PACÍFICO
+   ============================== */
+
+/*
+  El PNG tiene bastante espacio vacío.
+  Este contenedor permite ampliar
+  únicamente la parte visible del logo.
+*/
+
+.bank-logo-box {
+  width: 300px;
+  height: 85px;
+
+  margin: 0 auto 25px;
+
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .bank-logo {
-  display: block;
   width: 280px;
-  max-width: 85%;
   height: auto;
-  margin: 0 auto 35px;
+
+  display: block;
+
+  transform: scale(3);
+  transform-origin: center center;
 }
 
-/* CADA DATO UNO DEBAJO DEL OTRO */
+
+/* ==============================
+   DATOS BANCARIOS
+   ============================== */
+
 .bank-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 24px;
+
+  margin-bottom: 22px;
 }
+
+
+/* TÍTULOS */
 
 .bank-item span {
-  font-size: 14px;
+  display: block;
+
+  margin-bottom: 7px;
+
+  font-size: 15px;
   font-weight: 400;
+
+  letter-spacing: 0.8px;
+
   color: #88786b;
-  letter-spacing: 1px;
-  margin-bottom: 8px;
 }
+
+
+/* VALORES */
 
 .bank-item strong {
+  display: block;
+
   font-size: 19px;
   font-weight: 400;
+
+  letter-spacing: 0.5px;
+
   color: #303a39;
-  letter-spacing: .5px;
 }
 
-/* NÚMERO DE CUENTA PRINCIPAL */
+
+/* ==============================
+   NÚMERO DE CUENTA
+   ============================== */
+
 .bank-item .account-number {
-  font-size: 29px;
-  font-weight: 600;
-  letter-spacing: 4px;
-  color: #2f3938;
+  font-size: 27px;
+
+  /* SIN NEGRITA */
+  font-weight: 400;
+
+  letter-spacing: 3px;
+
+  color: #303a39;
 }
+
+
+/* ==============================
+   LÍNEA DORADA
+   ============================== */
 
 .bank-divider {
-  width: 65px;
+  width: 60px;
   height: 1px;
+
+  margin: 0 auto 22px;
+
   background: #c79755;
-  margin: 0 auto 24px;
 }
 
+
+/* ==============================
+   BOTÓN
+   ============================== */
+
 .bank .btn {
-  margin-top: 5px;
+  margin-top: 3px;
+
   padding: 14px 28px;
+
   font-size: 10px;
+
   letter-spacing: 2px;
 }
 
+
+/* MENSAJE AL COPIAR */
+
 .copy-ok {
   height: 18px;
+
   margin-top: 12px;
+
   font-size: 11px;
+
   color: #8b7659;
 }
+
+
+/* ==============================
+   CELULAR
+   ============================== */
 
 @media (max-width: 500px) {
 
   .bank {
-    padding: 30px 20px 25px;
+    padding: 28px 18px 24px;
+  }
+
+  .bank-logo-box {
+    width: 270px;
+    height: 80px;
+
+    margin-bottom: 22px;
   }
 
   .bank-logo {
     width: 250px;
-    max-width: 90%;
-    margin-bottom: 30px;
+    transform: scale(3);
   }
 
   .bank-item .account-number {
-    font-size: 26px;
-    letter-spacing: 3px;
+    font-size: 25px;
+    font-weight: 400;
+    letter-spacing: 2.5px;
+  }
+
+  .bank-item strong {
+    font-size: 18px;
+    font-weight: 400;
   }
 }
 
 </style>
 
+
 <script>
+
 function copyAccount() {
 
   const account = document
@@ -218,7 +328,9 @@ function copyAccount() {
     }, 3000);
 
   });
+
 }
+
 </script>
 </script><section class="section soft reveal"><div class="eyebrow">Tu presencia es importante para nosotros</div><h2>Confirma tu asistencia</h2><div class="guest"><div class="tiny" style="color:#8b795d">Esta invitación ha sido preparada para</div><div class="guest-name" id="guestName">Nuestro invitado especial</div><div class="ornament">— ✦ —</div><div class="seat" id="seatCount">—</div><div class="seat-label" id="seatLabel">LUGARES RESERVADOS</div><p>Estos lugares han sido reservados especialmente para esta invitación.</p></div><div class="deadline">CONFIRMACIÓN HASTA · 10 OCTUBRE 2026</div><button class="btn" onclick="confirmar()">Confirmar por WhatsApp</button></section>
 <footer><div class="tiny">Gracias por ser parte de nuestra historia</div><div class="names">Diego & Narcisa</div><div class="date">24 · 10 · 2026</div></footer></main>
