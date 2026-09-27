@@ -279,8 +279,30 @@ function copyAccount() {
 <footer><div class="tiny">Gracias por ser parte de nuestra historia</div><div class="names">Diego & Narcisa</div><div class="date">24 · 10 · 2026</div></footer></main>
 <audio id="weddingMusic" loop preload="metadata"><source src="assets/nuestra-cancion.mp3" type="audio/mpeg"></audio><button class="music-fixed" id="musicBtn" onclick="toggleMusic()">♫ &nbsp; ESCUCHAR NUESTRA CANCIÓN</button>
 <script>const invitados={"rosa":{nombre:"Rosa Perez",cupos:2},"leonardo":{nombre:"Leonardo y Katy",cupos:4},"humberto":{nombre:"Humberto y Anita",cupos:2},"santiago":{nombre:"Santiago y Ximena",cupos:4},"lili":{nombre:"Lili y Esteban",cupos:2},"luca":{nombre:"Luca Pallanca",cupos:1},"nelson":{nombre:"Nelson Timbi y Sra.",cupos:2},"marco":{nombre:"Marco y Cecy",cupos:2},"martha":{nombre:"Martha Timbi",cupos:2},"lolita":{nombre:"Fernando y Lolita",cupos:2},"aurora":{nombre:"Aurora",cupos:2},"julio":{nombre:"Julio Timbi y Sra.",cupos:2},"veronica":{nombre:"Veronica Ronquillo",cupos:2},"luis":{nombre:"Luis Feican",cupos:1},"ferandoanita":{nombre:"Fernando y Anita",cupos:2},"monica":{nombre:"Mónica Faican",cupos:2},"boris":{nombre:"Boris Romoleroux",cupos:2}};
-const params=new URLSearchParams(location.search),inv=invitados[params.get("i")];if(inv){document.getElementById("guestName").textContent=inv.nombre;document.getElementById("seatCount").textContent=inv.cupos;document.getElementById("seatLabel").textContent=inv.cupos===1?"LUGAR RESERVADO":"LUGARES RESERVADOS";}
-function confirmar(){const msg=`Hola, confirmo mi asistencia a la boda de Diego & Narcisa${inv?" · Invitación: "+inv.nombre+" · Lugares reservados: "+inv.cupos:""}.`;window.open("https://wa.me/593992825679?text="+encodeURIComponent(msg),"_blank")}
+const params = new URLSearchParams(location.search);
+const codigoInvitado = params.get("i");
+const inv = invitados[codigoInvitado];
+
+if(inv){
+    document.getElementById("guestName").textContent = inv.nombre;
+    document.getElementById("seatCount").textContent = inv.cupos;
+    document.getElementById("seatLabel").textContent =
+        inv.cupos === 1 ? "LUGAR RESERVADO" : "LUGARES RESERVADOS";
+
+    // Registrar cada visita en Supabase
+    fetch("https://hhljgkszcqiozbuwrsng.supabase.co/rest/v1/visitas", {
+        method: "POST",
+        headers: {
+            "apikey": "sb_publishable_C0420vzuHBkZuXVI5momTg_Lc5XFxTQ",
+            "Content-Type": "application/json",
+            "Prefer": "return=minimal"
+        },
+        body: JSON.stringify({
+            codigo: codigoInvitado,
+            nombre: inv.nombre
+        })
+    }).catch(() => {});
+}function confirmar(){const msg=`Hola, confirmo mi asistencia a la boda de Diego & Narcisa${inv?" · Invitación: "+inv.nombre+" · Lugares reservados: "+inv.cupos:""}.`;window.open("https://wa.me/593992825679?text="+encodeURIComponent(msg),"_blank")}
 const music=document.getElementById("weddingMusic"),mb=document.getElementById("musicBtn");function toggleMusic(){if(music.paused){music.play().then(()=>mb.innerHTML="♫ &nbsp; PAUSAR").catch(()=>{})}else{music.pause();mb.innerHTML="♫ &nbsp; ESCUCHAR NUESTRA CANCIÓN"}}music.addEventListener("pause",()=>mb.innerHTML="♫ &nbsp; ESCUCHAR NUESTRA CANCIÓN");
 function copyAccount(){navigator.clipboard.writeText(document.getElementById("accountNumber").textContent).then(()=>document.getElementById("copyOk").textContent="Número copiado ✓")}
 const target=new Date("2026-10-24T16:00:00-05:00").getTime();function tick(){let d=Math.max(0,target-Date.now());document.getElementById("days").textContent=Math.floor(d/86400000);document.getElementById("hours").textContent=String(Math.floor(d%86400000/3600000)).padStart(2,"0");document.getElementById("mins").textContent=String(Math.floor(d%3600000/60000)).padStart(2,"0");document.getElementById("secs").textContent=String(Math.floor(d%60000/1000)).padStart(2,"0")}tick();setInterval(tick,1000);
