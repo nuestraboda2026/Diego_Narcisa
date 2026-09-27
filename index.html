@@ -80,44 +80,27 @@
         class="bank-logo"
       >
     </div>
-
-    <!-- CUENTA -->
     <div class="bank-item">
       <span class="bank-label">Cuenta de ahorros</span>
-
-      <div id="accountNumber" class="account-number">
-        1040847087
-      </div>
+      <div id="accountNumber" class="account-number">1040847087</div>
     </div>
-
     <div class="bank-divider"></div>
-
-    <!-- CÉDULA -->
     <div class="bank-item">
       <span class="bank-label">C.I.</span>
       <div class="bank-value">0103662805</div>
     </div>
-
-    <!-- TITULAR -->
     <div class="bank-item">
       <span class="bank-label">Titular</span>
       <div class="bank-value">Diego Faican</div>
     </div>
-
-    <!-- BOTÓN -->
     <button class="btn ghost" onclick="copyAccount()">
       Copiar número de cuenta
     </button>
 
     <div id="copyOk" class="copy-ok"></div>
-
   </div>
 </section>
-
-
 <style>
-
-/* TARJETA */
 .bank {
   max-width: 430px;
   margin: 30px auto 0;
@@ -131,11 +114,6 @@
 
   box-shadow: 0 10px 30px rgba(80, 60, 30, 0.05);
 }
-
-
-/* =========================
-   LOGO
-   ========================= */
 
 .bank-logo-box {
   width: 300px;
@@ -160,11 +138,6 @@
   transform-origin: center center;
 }
 
-
-/* =========================
-   DATOS
-   ========================= */
-
 .bank-item {
   display: flex;
   flex-direction: column;
@@ -172,9 +145,6 @@
 
   margin-bottom: 23px;
 }
-
-
-/* TÍTULOS */
 
 .bank-label {
   display: block;
@@ -189,9 +159,6 @@
   color: #88786b;
 }
 
-
-/* VALORES NORMALES */
-
 .bank-value {
   font-size: 19px;
   font-weight: 400 !important;
@@ -200,12 +167,6 @@
 
   color: #303a39;
 }
-
-
-/* =========================
-   NÚMERO DE CUENTA
-   SIN NEGRITA
-   ========================= */
 
 .bank .account-number {
   display: block;
@@ -224,9 +185,6 @@
   line-height: 1.4;
 }
 
-
-/* LÍNEA DORADA */
-
 .bank-divider {
   width: 60px;
   height: 1px;
@@ -235,11 +193,6 @@
 
   background: #c79755;
 }
-
-
-/* =========================
-   BOTÓN
-   ========================= */
 
 .bank .btn {
   margin-top: 3px;
@@ -263,11 +216,6 @@
 
   color: #8b7659;
 }
-
-
-/* =========================
-   CELULAR
-   ========================= */
 
 @media (max-width: 500px) {
 
