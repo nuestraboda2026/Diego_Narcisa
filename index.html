@@ -72,7 +72,7 @@
 
   <div class="bank">
 
-    <!-- LOGO BANCO DEL PACÍFICO -->
+    <!-- LOGO -->
     <div class="bank-logo-box">
       <img
         src="assets/logo-banco-pacifico.png"
@@ -81,29 +81,30 @@
       >
     </div>
 
-    <!-- TIPO Y NÚMERO DE CUENTA -->
+    <!-- CUENTA -->
     <div class="bank-item">
-      <span>Cuenta de ahorros</span>
-      <strong id="accountNumber" class="account-number">
+      <span class="bank-label">Cuenta de ahorros</span>
+
+      <div id="accountNumber" class="account-number">
         1040847087
-      </strong>
+      </div>
     </div>
 
     <div class="bank-divider"></div>
 
     <!-- CÉDULA -->
     <div class="bank-item">
-      <span>C.I.</span>
-      <strong>0103662805</strong>
+      <span class="bank-label">C.I.</span>
+      <div class="bank-value">0103662805</div>
     </div>
 
     <!-- TITULAR -->
     <div class="bank-item">
-      <span>Titular</span>
-      <strong>Diego Faican</strong>
+      <span class="bank-label">Titular</span>
+      <div class="bank-value">Diego Faican</div>
     </div>
 
-    <!-- BOTÓN COPIAR -->
+    <!-- BOTÓN -->
     <button class="btn ghost" onclick="copyAccount()">
       Copiar número de cuenta
     </button>
@@ -116,15 +117,11 @@
 
 <style>
 
-/* ==============================
-   TARJETA BANCARIA
-   ============================== */
-
+/* TARJETA */
 .bank {
   max-width: 430px;
   margin: 30px auto 0;
   padding: 30px 25px 28px;
-
   text-align: center;
 
   background: #ffffff;
@@ -136,19 +133,13 @@
 }
 
 
-/* ==============================
-   LOGO BANCO DEL PACÍFICO
-   ============================== */
-
-/*
-  El PNG tiene bastante espacio vacío.
-  Este contenedor permite ampliar
-  únicamente la parte visible del logo.
-*/
+/* =========================
+   LOGO
+   ========================= */
 
 .bank-logo-box {
   width: 300px;
-  height: 85px;
+  height: 90px;
 
   margin: 0 auto 25px;
 
@@ -160,38 +151,38 @@
 }
 
 .bank-logo {
+  display: block;
+
   width: 280px;
   height: auto;
-
-  display: block;
 
   transform: scale(3);
   transform-origin: center center;
 }
 
 
-/* ==============================
-   DATOS BANCARIOS
-   ============================== */
+/* =========================
+   DATOS
+   ========================= */
 
 .bank-item {
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  margin-bottom: 22px;
+  margin-bottom: 23px;
 }
 
 
 /* TÍTULOS */
 
-.bank-item span {
+.bank-label {
   display: block;
 
   margin-bottom: 7px;
 
   font-size: 15px;
-  font-weight: 400;
+  font-weight: 400 !important;
 
   letter-spacing: 0.8px;
 
@@ -199,13 +190,11 @@
 }
 
 
-/* VALORES */
+/* VALORES NORMALES */
 
-.bank-item strong {
-  display: block;
-
+.bank-value {
   font-size: 19px;
-  font-weight: 400;
+  font-weight: 400 !important;
 
   letter-spacing: 0.5px;
 
@@ -213,39 +202,44 @@
 }
 
 
-/* ==============================
+/* =========================
    NÚMERO DE CUENTA
-   ============================== */
+   SIN NEGRITA
+   ========================= */
 
-.bank-item .account-number {
-  font-size: 27px;
+.bank .account-number {
+  display: block;
+
+  font-size: 27px !important;
 
   /* SIN NEGRITA */
-  font-weight: 400;
+  font-weight: 400 !important;
+
+  font-style: normal !important;
 
   letter-spacing: 3px;
 
   color: #303a39;
+
+  line-height: 1.4;
 }
 
 
-/* ==============================
-   LÍNEA DORADA
-   ============================== */
+/* LÍNEA DORADA */
 
 .bank-divider {
   width: 60px;
   height: 1px;
 
-  margin: 0 auto 22px;
+  margin: -3px auto 23px;
 
   background: #c79755;
 }
 
 
-/* ==============================
+/* =========================
    BOTÓN
-   ============================== */
+   ========================= */
 
 .bank .btn {
   margin-top: 3px;
@@ -258,7 +252,7 @@
 }
 
 
-/* MENSAJE AL COPIAR */
+/* MENSAJE COPIADO */
 
 .copy-ok {
   height: 18px;
@@ -271,9 +265,9 @@
 }
 
 
-/* ==============================
+/* =========================
    CELULAR
-   ============================== */
+   ========================= */
 
 @media (max-width: 500px) {
 
@@ -283,25 +277,26 @@
 
   .bank-logo-box {
     width: 270px;
-    height: 80px;
+    height: 85px;
 
     margin-bottom: 22px;
   }
 
   .bank-logo {
     width: 250px;
+
     transform: scale(3);
   }
 
-  .bank-item .account-number {
-    font-size: 25px;
-    font-weight: 400;
+  .bank .account-number {
+    font-size: 25px !important;
+    font-weight: 400 !important;
     letter-spacing: 2.5px;
   }
 
-  .bank-item strong {
+  .bank-value {
     font-size: 18px;
-    font-weight: 400;
+    font-weight: 400 !important;
   }
 }
 
